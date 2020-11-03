@@ -1,0 +1,13 @@
+﻿<Window x:Class="Labbar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labbar"
+        mc:Ignorable="d"
+        Title="Föreläsning" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="BtnHelloMessage" Content="Klicka på mig" HorizontalAlignment="Left" Margin="348,184,0,0" VerticalAlignment="Top" Height="56" Width="180" RenderTransformOrigin="-0.617,2.633" Click="BtnHelloMessage_Click"/>
+
+    </Grid>
+</Window>
