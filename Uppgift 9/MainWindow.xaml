@@ -1,0 +1,20 @@
+﻿<Window x:Class="Uppgift_9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uppgift_9"
+        mc:Ignorable="d"
+        Title="Bio information" Height="450" Width="800">
+    <Grid>
+        <Label Content="Namn" HorizontalAlignment="Left" Margin="167,78,0,0" VerticalAlignment="Top" Width="123"/>
+        <Label Content="Ålder" HorizontalAlignment="Left" Margin="166,160,0,0" VerticalAlignment="Top" Width="123" RenderTransformOrigin="0.504,-0.599"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="170,117,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtAge" HorizontalAlignment="Left" Margin="168,200,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <RadioButton x:Name="rbtnAdult" Content="Med Vuxen" HorizontalAlignment="Left" Margin="389,130,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbtnAlone" Content="Utan Vuxen" HorizontalAlignment="Left" Margin="389,165,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn" Content="Kontrollera" HorizontalAlignment="Left" Margin="391,198,0,0" VerticalAlignment="Top" Height="25" Width="72" Click="btn_Click"/>
+        <Label x:Name="lblControl" Content="" HorizontalAlignment="Left" Margin="49,275,0,0" VerticalAlignment="Top" Height="114" Width="690"/>
+
+    </Grid>
+</Window>

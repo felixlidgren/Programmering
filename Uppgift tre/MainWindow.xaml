@@ -1,0 +1,18 @@
+﻿<Window x:Class="Uppgift_tre.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uppgift_tre"
+        mc:Ignorable="d"
+        Title="Dubbel knappen" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="197*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btn1"  Content="Klicka på mig" HorizontalAlignment="Left" Margin="478,315,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="btn1_Click"/>
+        <Button x:Name="btn2" Content="Klicka på mig" HorizontalAlignment="Left" Margin="161,316,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="btn2_Click"/>
+
+    </Grid>
+</Window>

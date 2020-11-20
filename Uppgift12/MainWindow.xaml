@@ -1,0 +1,20 @@
+﻿<Window x:Class="Uppgift12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uppgift12"
+        mc:Ignorable="d"
+        Title="Medelvärde" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="txtNumbers" HorizontalAlignment="Left" Margin="210,103,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="42"/>
+        <TextBox x:Name="txtMidValue" HorizontalAlignment="Left" Margin="210,214,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="42"/>
+        <Button x:Name="btnOk" Content="OK" HorizontalAlignment="Left" Margin="376,103
+                ,0,0" VerticalAlignment="Top" Height="33" Width="76" Click="Button_Click"/>
+        <Label Content="Mata in tal" HorizontalAlignment="Left" Margin="211,76,0,0" VerticalAlignment="Top" Width="99"/>
+        <Label Content="Totala medelvärde" HorizontalAlignment="Left" Margin="211,187,0,0" VerticalAlignment="Top" Width="117"/>
+        <ListBox x:Name="listBoxValues" Margin="470,103,162,160"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="377,220,0,0" VerticalAlignment="Top" Height="33" Width="76" Click="btnClear_Click"/>
+
+    </Grid>
+</Window>

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Uppgift_3
+namespace Uppgift_5
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,26 @@ namespace Uppgift_3
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            int boxOne, boxTwo, boxSum;
+            boxOne = int.Parse(txtBoxOne.Text);
+            boxTwo = int.Parse(txtBoxTwo.Text);
+
+            boxSum = boxOne + boxTwo;
+
+            txtBoxSum.Text = boxSum.ToString();
+
+
+        }
+
+        private void btnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            txtBoxOne.Clear();
+            txtBoxTwo.Clear();
+            txtBoxSum.Clear();
         }
     }
 }
