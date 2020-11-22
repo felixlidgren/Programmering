@@ -27,9 +27,9 @@ namespace Uppgift_8
 
         private void btnSum_Click(object sender, RoutedEventArgs e)
         {
-            double knutingar = 0.12, siklar = 3.64, galleoner = 62.02, Sumtotal;
+            double knutingar = 0.1257, siklar = 3.64, galleoner = 62.02, Sumtotal;
 
-            knutingar = double.Parse(txtBox1.Text)*0.12;
+            knutingar = double.Parse(txtBox1.Text)*0.1257;
             siklar = double.Parse(txtBox2.Text)*3.64;
             galleoner = double.Parse(txtBox3.Text)*62.02;
             Sumtotal = knutingar + siklar + galleoner;
