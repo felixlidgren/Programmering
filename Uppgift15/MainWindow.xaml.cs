@@ -23,6 +23,7 @@ namespace Uppgift15
         int vokaler = 0;
         char[] smallVowels = { 'a', 'e', 'i', 'o', 'u', 'y', 'å', 'ä', 'ö' };
         char[] bigVowels = { 'A', 'E', 'I', 'O', 'U', 'Y', 'Å', 'Ä', 'Ö' };
+        string allVowels = "aouåeiyäöAOUÅEIYÄÖ";
 
         public MainWindow()
         {
@@ -30,20 +31,33 @@ namespace Uppgift15
 
            
         }
-               
+            public bool IsVowel(char Vokal) 
+            {
+                
+                bool aVowel = false;
+
+                foreach (char vok in allVowels)
+                {
+                    if (vok == Vokal)
+                    {
+                        aVowel = true;
+                        break;
+
+                    }
+                }
+                return aVowel;
+            }
                    
             private int NumberOfvowels(string HittaVokaler)
             {
-
-            
 
                 string text = txtBox.Text;
 
                 foreach (char vowels in HittaVokaler)
                 {
 
-                    for (int i = 0; i < smallVowels.Length; i++)
-                    {
+                for (int i = 0; i < smallVowels.Length; i++)
+                {
 
                         if (vowels == smallVowels[i] || vowels == bigVowels[i])
                         {
@@ -57,27 +71,80 @@ namespace Uppgift15
                 return vokaler;
 
             }
-          
-                          
+
+
 
             public string ConvertLetter(string HittaVokaler)
             {
-                string text = txtBox.Text;
+                string converter = "";
                 
 
-                foreach (char vowel in smallVowels) 
-                { 
-                text = text.Replace(vowel, 'ö');
-                }
 
-                foreach (char vowel in bigVowels)
+
+                foreach (char character in HittaVokaler)
                 {
-                text = text.Replace(vowel, 'Ö');
+                    bool vow = BigVowels(character);
+                    bool smallVow = SmallVowels(character);
+
+                    if (vow == true) 
+                    {
+                         converter += "Ö";
+                    }
+                        
+                    else if (smallVow == true) 
+                    {
+                        converter += "ö";
+                    }
+
+                    else
+                    {
+                        converter += character.ToString();
+                    }
                 }
-                 return text;
+                return converter;
+
+
             }
 
+        public bool BigVowels(char letter)
+        {
 
+            string big = "AOUÅEIYÄÖ";
+            
+            bool ifBig = false;
+            
+
+
+            foreach (char vow in big)
+            {
+                if (vow == letter)
+                {
+                    ifBig = true;
+                    break;
+                }
+                
+            }
+            return ifBig;
+        }
+        
+        public bool SmallVowels (char letter) 
+        { 
+            string small = "aouåeiyäö";
+            bool ifSmall = false;
+
+                foreach (char vow in small)
+                { 
+                    if (vow == letter)
+                    {
+                        ifSmall = true;
+                        break;
+
+                    }
+
+                    
+                }
+                return ifSmall;
+        }
 
             private void btnConvert_Click(object sender, RoutedEventArgs e)
             {

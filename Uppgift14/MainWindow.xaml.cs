@@ -26,40 +26,46 @@ namespace Uppgift14
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private bool Birth(string Age)
         {
-            string birth =txtAge.Text ;
-            
-
+            string birth = txtAge.Text;
             int year = DateTime.Now.Year;
             
-                                  
+
+            if (string.Concat(birth).All(char.IsDigit))
+            {
+
+                int age = int.Parse(txtAge.Text);
+                int Sum = year - age;
+
+                MessageBox.Show($"Du är {Sum}år gammal.");
+                return Age;
+
+            }
+
+            else if 
+            {
+                MessageBox.Show("Du kan enbart använda siffror");
+                return Age;
+            }
+        }
+
+
+
+
+
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
             
-                if (string.Concat(birth).All(char.IsDigit))
-                {
-
-                    int age = int.Parse(txtAge.Text);
-                    int Sum = year - age;
-
-                    MessageBox.Show($"Du är {Sum}år gammal.");
-                    return;
-
-                }
-
-                else if (string.Concat(birth).Any(char.IsLetter) || string.Concat(birth).Any(char.IsLetter))
-                {
-                    MessageBox.Show("Du kan enbart använda siffror");
-                    return;
-                }
-
-               
 
 
-            
 
 
-            
 
         }
     }
+
 }
