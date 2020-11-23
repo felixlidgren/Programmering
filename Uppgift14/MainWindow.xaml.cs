@@ -20,7 +20,7 @@ namespace Uppgift14
     /// </summary>
     public partial class MainWindow : Window
     {
-        int[] letter = new int[3];
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -28,41 +28,42 @@ namespace Uppgift14
 
         private bool Birth(string Age)
         {
-            string birth = txtAge.Text;
-            int year = DateTime.Now.Year;
-            
+            bool birth = true;
 
-            if (string.Concat(birth).All(char.IsDigit))
+
+            foreach (char number in Age)
             {
+                if (char.IsLetter(number) == false)
+                {
 
-                int age = int.Parse(txtAge.Text);
-                int Sum = year - age;
+                    birth = true;
 
-                MessageBox.Show($"Du är {Sum}år gammal.");
-                return Age;
-
+                }
+                else
+                {
+                    birth = false;
+                    break;
+                }
+                
             }
-
-            else if 
-            {
-                MessageBox.Show("Du kan enbart använda siffror");
-                return Age;
-            }
+            return birth;
         }
-
-
-
-
-
 
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string birthYear = txtAge.Text;
+            bool newNumbers = Birth(birthYear);
 
-            
-
-
-
+            if (newNumbers == true)
+            {
+                int age = DateTime.Now.Year - int.Parse(txtAge.Text);
+                MessageBox.Show($"Du är {age} år.");
+            }
+            else if (newNumbers == false)
+            {
+                MessageBox.Show("Du får enbart mata in siffror");
+            }
 
 
         }
